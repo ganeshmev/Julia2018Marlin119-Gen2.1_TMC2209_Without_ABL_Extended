@@ -58,7 +58,7 @@
 #elif BV(JULIA_2018_RPI_E)
   #define X_BED_SIZE  250
   #define Y_BED_SIZE  249 // since it was hitting, reduced from 250, very and revert back if needed 
-  #define Z_MAX_POS   300
+  #define Z_MAX_POS   310
 #elif BV(JULIA_2018_PRO_SINGLE)
   #define X_BED_SIZE  400
   #define Y_BED_SIZE  400
@@ -151,7 +151,8 @@
   //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200,  200, 1007.874, 280 }  for 1/32 microstep ratio
   #define DEFAULT_AXIS_STEPS_PER_UNIT   { 100,  100, 503.937, 140 }
 #else
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160,  160, 1007.874, 280 } //was { 160,  160, 1007.874, 280 } for old printers
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80,  80, 503.937, 140 }//20 tooth pulley
+  //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160,  160, 1007.874, 280 } //was { 160,  160, 1007.874, 280 } for old printers
 #endif
 #if BV_PRO() || BV_PRO_ABL() || BV_PRO_ABL24()
   #define DEFAULT_MAX_FEEDRATE          { 300, 300, 20, 45 }
